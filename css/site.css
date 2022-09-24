@@ -3,6 +3,7 @@
     --secondary: #ff993b;
     --dark-color: #292929;
     --white-color: #e7e7e7;
+    --blue-color: rgb(11, 82, 214);
 }
 
 body{
@@ -62,7 +63,20 @@ main>.container {
 }
 
 .checklist> li i {
-    color: var(--secondary);
+    color: var(--blue-color);
+}
+
+.Yin{
+    color: darkgreen;
+}
+
+.Yang{
+    color: darkblue;
+}
+
+.YinYang{
+    color: red;
+    font-weight: bold;
 }
 
 code[class*="language-"],
@@ -74,6 +88,6 @@ code[class*="language-"],
 
 @media only screen and (max-width: 400px) {
     .responsiveicon {
-        font-size: 10vh;
+        font-size: 8vh;
     }
 }
