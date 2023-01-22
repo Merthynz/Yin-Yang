@@ -15,7 +15,7 @@ function getValues() {
     if(Number.isInteger(yinValue) && Number.isInteger(yangValue)) {
 
         // We call yinyang
-        let yyArray = yinYang(yinValue, yangValue);
+        let yyArray = yinYangC(yinValue, yangValue);
 
         //  Call displayData and write the values to the screen
         displayData(yyArray);
@@ -28,6 +28,8 @@ function getValues() {
 // Do Yin Yang
 // Generate numbers from yinValue to the yangValue
 // Logic Functions
+
+// Solution using if/else statement
 function yinYang(yinValue, yangValue) {
 
     //init the return array
@@ -52,6 +54,54 @@ function yinYang(yinValue, yangValue) {
     return returnArray;
 }
 
+// Solution using Boolean variables to check them upfront and then check the boolean variables using switch statement
+function yinYangB(yinValue, yangValue){
+
+    let returnArray = [];
+    let Yin = false;
+    let Yang = false;
+
+    for (let i = 1; i <= 100; i++){
+
+        Yin = i % yinValue == 0;
+        Yang = i % yangValue == 0;
+
+        switch(true)
+        {
+            case Yin && Yang:{
+                returnArray.push("YinYang");
+                break;
+            }
+            case Yin: {
+                returnArray.push("Yin");
+                break;
+            }
+            case Yang: {
+                returnArray.push("Yang");
+                break;
+            }
+            default:{
+                returnArray.push(i);
+                break;
+            }
+        }
+    }
+    return returnArray;
+}
+
+// Solution using ternary operator (?)
+function yinYangC(yinValue, yangValue){
+    
+    let returnArray = [];
+
+    for (let i = 1; i <= 100; i++){
+
+        let value = ((i % yinValue == 0 ? "Yin" : "") + (i % yangValue == 0 ? "Yang" : "") || i);
+        returnArray.push(value);
+    }
+
+    return returnArray;
+}
 
 // Display the numbers from start to end. Mark Yin, Yang and Yin Yang.
 // Loop over the array and create a tablerow for each item.
