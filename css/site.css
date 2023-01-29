@@ -68,10 +68,12 @@ main>.container {
 
 .Yin{
     color: darkgreen;
+    font-weight: bold;
 }
 
 .Yang{
     color: darkblue;
+    font-weight: bold;
 }
 
 .YinYang{
