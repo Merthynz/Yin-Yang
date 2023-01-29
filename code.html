@@ -153,9 +153,14 @@ function displayData(yyArray) {
                     </pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The Code is structured in one function.</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function taht displays an alert with a message of "Hello World"</p>
+                    <p>This program accepts a starting number and an ending number from the user. It then checks the divisibility of the entered numbers. If the number is divisible by the first number, it prints Yin. If the number is divisible by the second number, it prints Yang. If the number is divisible by both numbers, then it prints YinYang. The Yin, Yang, and YinYang are colored in output using the css.</p>
+                    <p>This program is done using the following functions:</p>
+                    <h5>getValues()</h5>
+                    <p>This function gets the values from the document object model. It then converts the values into integers. If they are not integers it alerts the user.</p>
+                    <h5>yinYang()</h5>
+                    <p>This function checks for divisbility. It uses a for loop to check the index value for divisbility by the values entered and appends the number if they are not. It appends "Yin" if the number is divisible by the first value. It appends "Yang" if the number is divisble by the second value. If the number is divisible by both values then it appends "YinYang".</p>
+                    <h5>displayData()</h5>
+                    <p>This function gets a premade template from the app.html document and loads the array of values returned from FizzBuzz(). It then adds them to the table five per row and colors them using CSS selectors.</p>
                 </div>
             </div>
         </div>
